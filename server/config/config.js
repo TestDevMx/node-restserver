@@ -17,6 +17,16 @@ process.env.PORT = process.env.PORT || 3000;
  }
 
 
+ /**
+  * Vencimiento del token 60 *60
+  */
+process.env.CADUCIDAD_TOKEN = Math.floor(Date.now() / 1000) + (60 * 60);
+
+
+/**
+ * SEED
+ */
+process.env.SEED = process.env.SEED || 'SEED-DEV';
 process.env.URLDB = urlDB;
 
 

@@ -14,8 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// Rutas
-app.use( require('./rutas/usuario') );
+// Confuguración global de rutas
+app.use( require('./rutas/index') );
+
  
 mongoose.connect(process.env.URLDB, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,})
             .then((resp) => console.log('Base ONLINE en puerto: ', resp.connection.port));
