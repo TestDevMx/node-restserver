@@ -29,8 +29,10 @@ process.env.CADUCIDAD_TOKEN = Math.floor(Date.now() / 1000) + (60 * 60);
 process.env.SEED = process.env.SEED || 'SEED-DEV';
 process.env.URLDB = urlDB;
 
-
-
+/**
+ * Google Client ID
+ */
+process.env.CLIENT_ID = process.env.CLIENT_ID || '1016611836098-2d8lvkch8q0f9mm8ejo7lvq66qchs8i5.apps.googleusercontent.com';
 
 
 
