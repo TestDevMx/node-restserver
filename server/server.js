@@ -21,7 +21,12 @@ app.use(express.static( path.resolve( __dirname, '../public' )));
 app.use( require('./rutas/index') );
 
  
-mongoose.connect(process.env.URLDB, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,})
+mongoose.connect(process.env.URLDB,{
+                useNewUrlParser: true, 
+                useUnifiedTopology: true, 
+                useCreateIndex: true,
+                useFindAndModify: false
+            })
             .then((resp) => console.log('Base ONLINE en puerto: ', resp.connection.port));
             
 
